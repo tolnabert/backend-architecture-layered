@@ -5,8 +5,8 @@ import { PetRepository } from '../data-access/pet-repository';
 export class PetService {
   private readonly repository;
 
-  constructor(store: JsonFileStore<Pet>) {
-    this.repository = new PetRepository(store);
+  constructor(repository: PetRepository) {
+    this.repository = repository;
   }
 
   async born(name: string) {
