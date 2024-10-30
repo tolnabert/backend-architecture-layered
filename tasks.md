@@ -21,16 +21,26 @@ When a day passes, the pet behaves like this:
 Answer these questions:
 
 - What is the entrypoint of this application?
+server.ts at main method call
 - How can we start a dev server?
+npm run dev
 - Where can you find the API specification?
+open-api.yaml
 - What endpoints are currently implemented?
+/pets - get,post
+in spec :
+/pets/{petId} - get
+/pets/{petId}/food - post
+/pets/{petId}/age - post
 
 ## Task 2: Refactor our code
 
 Answer these questions:
 
 - What is the problem with the code from clean coding point of view?
+createApp includes endpoints and schemas, should be outside
 - What kind of concerns can you recognize in the `app.ts`?
+
 - What kind of tests are easy to write to this code?
 
 Refactor the code to the *Layered Architecture* layers: Presentational Layer, Business Logic Layer, Data Access Layer.
